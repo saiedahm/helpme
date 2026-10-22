@@ -71,6 +71,81 @@ footer{border-top:1px solid var(--line);background:#080808;padding:38px clamp(18
 .tracking-step small{display:block;color:#A1A1AA;margin-top:4px}
 @media(max-width:800px){.carrier-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.tracking-section,.carrier-section{margin-left:16px;margin-right:16px}}
 @media(max-width:520px){.tracking-form{flex-direction:column}.tracking-form .primary{width:100%}.carrier-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.carrier-logo{min-height:72px}}
+
+/* HELPMEY HOMEPAGE LUXURY REFINEMENT — visual-only overrides; catalog and checkout logic remain intact */
+:root{--gold:#D4AF37;--bright:#FFD700;--antique:#996515;--bg:#080808;--surface:#121212;--white:#F8F5EC;--muted:#B7B0A0}
+body{background:#080808}
+header{background:rgba(7,7,7,.96);border-bottom:1px solid rgba(212,175,55,.55);box-shadow:0 8px 30px #0009}
+.topbar{min-height:88px;padding:14px clamp(16px,4vw,54px);gap:20px}
+.brand{font-family:'Cinzel Decorative','Cinzel',serif;font-size:clamp(23px,2.6vw,34px);letter-spacing:3px;line-height:1.08;filter:drop-shadow(0 3px 10px rgba(212,175,55,.42))}
+.brand .brand-crown{width:29px;height:22px;margin-left:40px;margin-bottom:2px}
+.brand small{font-size:9px;letter-spacing:3px;margin-top:7px}
+.tools{gap:10px}
+.select,.search{background:#111;border:1px solid #8f742c;color:#f8f5ec;border-radius:8px;min-height:43px}
+.select:focus,.search:focus{outline:none;border-color:#FFD700;box-shadow:0 0 0 2px #ffd70028,0 0 18px #d4af3724}
+nav{min-height:54px;background:linear-gradient(180deg,#101010,#080808);border-top:1px solid #d4af3725}
+nav a{padding:17px 15px;color:#e8e1d2;letter-spacing:.035em;transition:color .25s,background .25s}
+nav a:hover,nav a[aria-current="page"]{color:#FFD700;background:linear-gradient(180deg,#d4af370d,transparent)}
+.hero{position:relative;isolation:isolate;min-height:590px;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(24px,4vw,60px);padding:clamp(38px,5.2vw,78px) clamp(20px,5.4vw,82px);background:radial-gradient(ellipse at 80% 42%,#a9782730,transparent 48%),linear-gradient(120deg,#070707 0%,#12100c 57%,#080808 100%);overflow:hidden}
+.hero:before{content:"";position:absolute;inset:14px;border:1px solid #d4af371b;pointer-events:none;z-index:-1}
+.hero .eyebrow{font-size:11px;letter-spacing:.34em;color:#e5bd54}
+.hero h1{font-family:'Cinzel','Playfair Display',serif;font-size:clamp(39px,4.8vw,70px);line-height:1.08;letter-spacing:-.025em;margin:20px 0 22px;text-wrap:balance;text-shadow:0 5px 28px #000}
+.hero h1 .gold{background:linear-gradient(120deg,#fff0b2 0%,#ffd700 35%,#d4af37 70%,#996515 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:15px;line-height:1.85;color:#d0c9bb;max-width:480px}
+.actions{gap:13px;margin-top:30px}
+.primary,.outline{min-height:48px;padding:13px 24px;border-radius:7px;letter-spacing:.025em;transition:transform .25s,filter .25s,box-shadow .25s}
+.primary{background:linear-gradient(135deg,#ffe9a0 0%,#ffd700 28%,#d4af37 68%,#996515 100%);box-shadow:0 6px 24px #d4af3726;border:1px solid #f6d979}
+.primary:hover{transform:translateY(-2px);filter:brightness(1.08);box-shadow:0 0 26px #ffd70045}
+.outline{background:#0a0a0a8c;border:1px solid #c9a43a;color:#e8c65b}
+.outline:hover{background:#d4af3715;box-shadow:0 0 18px #d4af3720}
+.hero-art{min-height:clamp(370px,40vw,535px);border:1px solid #e2bd4d;border-radius:13px;padding:8px;box-shadow:0 0 0 1px #d4af3738,inset 0 0 0 1px #ffd70045,0 22px 65px #000b,0 0 38px #d4af3725;background:#100d08}
+.hero-art img{inset:8px;width:calc(100% - 16px);height:calc(100% - 16px);opacity:.9;filter:saturate(.88) contrast(1.05);border-radius:7px}
+.hero-art:after{inset:8px;background:linear-gradient(0deg,#050505ed 0%,#08080840 26%,transparent 63%),linear-gradient(90deg,#07070725,transparent 50%,#0707071c);border-radius:7px}
+.art-copy{bottom:27px;left:28px;right:28px;padding-top:18px;border-top:1px solid #d4af3766}
+.art-copy strong{font:700 clamp(26px,3vw,42px)/1.15 'Cinzel Decorative','Cinzel',serif;letter-spacing:.045em;background:linear-gradient(135deg,#fff0b0,#ffd700 45%,#d4af37 78%,#fff0b0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.art-copy span{letter-spacing:.22em;font-size:10px;color:#f2dfaa}
+.worlds{gap:20px;padding:8px clamp(18px,5.4vw,82px) 54px;background:linear-gradient(180deg,#080808,#0c0b09)}
+.world-card{height:clamp(230px,25vw,340px);border:1px solid #c9a43a;border-radius:10px;box-shadow:0 12px 32px #0008,0 0 0 1px #d4af371f;transition:transform .35s,box-shadow .35s}
+.world-card:hover{transform:translateY(-4px);box-shadow:0 20px 42px #000b,0 0 25px #d4af3735}
+.world-card img{opacity:.8;filter:saturate(.86) contrast(1.04)}
+.world-card:after{background:linear-gradient(90deg,#070707d9 0%,#07070761 55%,transparent 100%),linear-gradient(0deg,#070707d9,transparent 75%)}
+.world-card .world-label{left:clamp(18px,3vw,36px);bottom:clamp(18px,3vw,30px)}
+.world-label strong{font:700 clamp(27px,3vw,42px)/1.15 'Cinzel','Playfair Display',serif;letter-spacing:.04em;color:#f4d16b;text-shadow:0 3px 18px #000}
+.world-label span{display:block;margin-top:8px;color:#f0e7d5;letter-spacing:.12em;text-transform:uppercase;font-size:10px}
+.section{background:#090909}
+.section h2{font-family:'Cinzel','Playfair Display',serif;color:#f1d16e}
+footer{background:linear-gradient(180deg,#10100f,#060606);border-top:1px solid #d4af3755}
+footer .brand{font-size:23px}
+footer .brand .brand-crown{width:22px;height:17px;margin-left:34px}
+footer .brand small{font-size:8px;letter-spacing:2px}
+.cookie{border-color:#d4af37;background:rgba(10,10,10,.97);box-shadow:0 -8px 35px #000b,0 0 20px #d4af3710}
+.cookie button{border-radius:7px}
+@media(max-width:900px){
+ .topbar{flex-wrap:wrap;min-height:auto;gap:12px}
+ .brand{font-size:25px}
+ .hero{grid-template-columns:1fr;gap:26px;min-height:0;padding:42px 22px}
+ .hero>div:first-child{max-width:720px}
+ .hero-art{min-height:clamp(300px,60vw,470px)}
+ .worlds{padding:10px 20px 38px;gap:14px}
+}
+@media(max-width:600px){
+ .topbar{padding:12px 14px}
+ .brand{font-size:23px}
+ .brand .brand-crown{margin-left:35px}
+ .brand small{font-size:8px;letter-spacing:2px}
+ .tools{width:100%;display:grid;grid-template-columns:minmax(95px,.7fr) minmax(0,1.3fr);gap:8px}
+ .tools .search{min-width:0;width:100%}
+ nav{overflow-x:auto;justify-content:flex-start}
+ nav a{padding:13px 12px;white-space:nowrap;font-size:12px}
+ .hero{padding:34px 16px 28px}
+ .hero h1{font-size:clamp(36px,10vw,50px)}
+ .hero-art{min-height:320px}
+ .art-copy{left:17px;right:17px;bottom:19px}
+ .art-copy span{font-size:8px;letter-spacing:.14em}
+ .worlds{grid-template-columns:1fr;padding:6px 16px 32px}
+ .world-card{height:245px}
+}
+
 </style></head>
 <body>
 <header>
