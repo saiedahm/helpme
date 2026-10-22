@@ -44,6 +44,19 @@ const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll
 const womenCats=['Kleider','Uhren','Parfüms','Make-up','Tasche','Schlafanzüge','Unterwäsche'];
 const menCats=['Anzüge','Uhren','Parfüms','Schlafanzüge','Schuhe','Tasche','T-Shirts & Polos'];
 const brands=['Apple','Samsung','Xiaomi','Huawei','Google Pixel','OnePlus','Sony','Oppo','Vivo','Realme','Motorola','Asus','Nothing','Honor','ZTE','Nokia','Infinix','Tecno','Lenovo','Sharp'];
+const categoryNames={
+'Kleider':{en:'Dresses',fr:'Robes',it:'Abiti',es:'Vestidos',ar:'فساتين',tr:'Elbiseler',ru:'Платья',nl:'Jurken',zh:'连衣裙'},
+'Uhren':{en:'Watches',fr:'Montres',it:'Orologi',es:'Relojes',ar:'ساعات',tr:'Saatler',ru:'Часы',nl:'Horloges',zh:'手表'},
+'Parfüms':{en:'Perfumes',fr:'Parfums',it:'Profumi',es:'Perfumes',ar:'عطور',tr:'Parfümler',ru:'Парфюмерия',nl:'Parfum',zh:'香水'},
+'Make-up':{en:'Make-up',fr:'Maquillage',it:'Trucco',es:'Maquillaje',ar:'مكياج',tr:'Makyaj',ru:'Макияж',nl:'Make-up',zh:'彩妆'},
+'Tasche':{en:'Handbags',fr:'Sacs',it:'Borse',es:'Bolsos',ar:'حقائب',tr:'Çantalar',ru:'Сумки',nl:'Tassen',zh:'手提包'},
+'Schlafanzüge':{en:'Pyjamas',fr:'Pyjamas',it:'Pigiami',es:'Pijamas',ar:'ملابس نوم',tr:'Pijamalar',ru:'Пижамы',nl:'Pyjama’s',zh:'睡衣'},
+'Unterwäsche':{en:'Lingerie',fr:'Lingerie',it:'Intimo',es:'Ropa interior',ar:'ملابس داخلية',tr:'İç giyim',ru:'Нижнее бельё',nl:'Ondergoed',zh:'内衣'},
+'Anzüge':{en:'Suits',fr:'Costumes',it:'Abiti',es:'Trajes',ar:'بدلات',tr:'Takımlar',ru:'Костюмы',nl:'Pakken',zh:'西装'},
+'Schuhe':{en:'Shoes',fr:'Chaussures',it:'Scarpe',es:'Zapatos',ar:'أحذية',tr:'Ayakkabılar',ru:'Обувь',nl:'Schoenen',zh:'鞋子'},
+'T-Shirts & Polos':{en:'T-Shirts & Polos',fr:'T-shirts et polos',it:'T-shirt e polo',es:'Camisetas y polos',ar:'قمصان وبولو',tr:'Tişört ve polo',ru:'Футболки и поло',nl:'T-shirts en polo’s',zh:'T恤与 Polo衫'}
+};
+function categoryLabel(name){return lang==='de'?name:(categoryNames[name]?.[lang]||name)}
 const prices=[49,79,95,129,159,189,219,249,69,89,119,139,179,199,229,269,59,99,149,299];
 const dict={
 de:{home:'Startseite',about:'Über uns',women:'Damen',men:'Herren',phones:'Telefon-Zubehör',contact:'Kontakt',newsletter:'VIP Newsletter',eyebrow:'DIE KUNST DES BESONDEREN',heroTitle:'Luxus, der Ihre Welt bewegt.',heroText:'Entdecken Sie eine kuratierte Welt aus Mode, Beauty und Accessoires – geschaffen für Menschen mit Sinn für außergewöhnliche Details.',discoverWomen:'Damen entdecken ↗',discoverMen:'Herren entdecken',heroTag:'AUSGEWÄHLT. ZEITLOS. EXKLUSIV.',womenWorld:'Damen World',menWorld:'Herren World',exploreCollection:'Kollektion entdecken ↗',aboutEyebrow:'UNSERE PHILOSOPHIE',aboutTitle:'Eine Liebe zum Detail',aboutText:'Helpmey vereint moderne Eleganz, ausgewählte Stilwelten und ein besonderes Einkaufserlebnis.',backHome:'Zur Startseite',contactEyebrow:'WIR SIND FÜR SIE DA',contactTitle:'Kontakt & Service',imprint:'Impressum',terms:'AGB',privacy:'Datenschutz',withdrawal:'Widerruf',cookieSettings:'Cookie-Einstellungen',cookieText:'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern und den Datenverkehr zu analysieren. Weitere Informationen finden Sie in unserer Datenschutzerklärung.',accept:'Alle akzeptieren',reject:'Alle ablehnen',settings:'Einstellungen',womenTitle:'Damen Kollektion',menTitle:'Herren Kollektion',phonesTitle:'Telefon-Zubehör',womenDesc:'Entdecken Sie unsere Damenkollektion.',menDesc:'Entdecken Sie unsere Herrenkollektion.',phonesDesc:'Wählen Sie eine Marke, um kompatibles Zubehör zu entdecken.',selectBrand:'Marke auswählen',searchPlaceholder:'Produkte suchen …',item:'Artikel',add:'In den Warenkorb',details:'Details ansehen',color:'Farbe',model:'Größe / Modell',quantity:'Menge',price:'Preis',cart:'Warenkorb',emptyCart:'Ihr Warenkorb ist noch leer.',continue:'Weiter zur Kasse',remove:'Entfernen',subtotal:'Zwischensumme',checkout:'Kasse',payment:'Zahlungsmethode',card:'Kredit-/Debitkarte (Visa / Mastercard)',stripe:'Stripe',paypal:'PayPal',demoNotice:'Demo-Shop: Es wird keine echte Zahlung ausgelöst. Verbinden Sie einen geprüften Zahlungsanbieter, bevor Sie Bestellungen live annehmen.',placeOrder:'Demo-Bestellung bestätigen',receipt:'Bestellbestätigung',newsletterTitle:'Ein Platz in unserer VIP-Welt',newsletterText:'Melden Sie sich mit Ihrer E-Mail für Neuigkeiten und ausgewählte Kollektionen an.',email:'E-Mail-Adresse',subscribe:'VIP-Zugang anfordern',confirmTitle:'Fast geschafft – willkommen bei Helpmey',confirmText:'Dies ist eine simulierte Bestätigung. Bestätigen Sie unten, um den VIP-Shop zu öffnen.',enterStore:'VIP-Shop öffnen',product:'Exklusives Modell',description:'Ein sorgfältig ausgewähltes Design mit eleganten Details. Produktinformationen können vor dem Live-Verkauf ergänzt werden.',chooseColor:'Farbe auswählen',black:'Schwarz',gold:'Gold',cream:'Creme',sizeOne:'Einheitsgröße',close:'Schließen',privacyTitle:'Datenschutzerklärung',imprintTitle:'Impressum',termsTitle:'Allgemeine Geschäftsbedingungen',withdrawalTitle:'Widerruf',necessary:'Notwendige Cookies',analytics:'Analyse-Cookies',personalization:'Personalisierung',save:'Auswahl speichern',onlyNecessary:'Nur notwendige',legalNotice:'Rechtliche Texte sind eine Vorlage und müssen vor dem Livegang geprüft und an den tatsächlichen Betrieb angepasst werden.',searchNone:'Keine passenden Produkte gefunden.'},
@@ -74,14 +87,14 @@ function renderView(){
  if(view==='phones'&&phoneBrand===''){tabs.innerHTML='';}
  if(view==='women'||view==='men'){
   const cats=view==='women'?womenCats:menCats;
-  cats.forEach(cat=>{let b=document.createElement('button');b.className='tab'+(cat===category?' active':'');b.textContent=cat;b.onclick=()=>{category=cat;renderView()};tabs.append(b)});
+  cats.forEach(cat=>{let b=document.createElement('button');b.className='tab'+(cat===category?' active':'');b.textContent=categoryLabel(cat);b.onclick=()=>{category=cat;renderView()};tabs.append(b)});
  } else if(view==='phones'){
   tabs.innerHTML='<span class="muted">'+t('selectBrand')+'</span>';
   brandGrid.hidden=false;brandGrid.innerHTML='';
   brands.forEach(brand=>{const b=document.createElement('button');b.className='brand-tile';b.innerHTML='<span style="font-size:24px;color:var(--gold)">✧</span><strong></strong><span class="muted" style="font-size:11px">20 '+t('item')+'</span>';b.querySelector('strong').textContent=brand;b.onclick=()=>{phoneBrand=brand;renderView();grid.scrollIntoView({behavior:'smooth',block:'start'})};if(brand===phoneBrand)b.style.background='linear-gradient(145deg,#33260d,#111)';brandGrid.append(b)});
  }
  const items=[];
- const kind=view==='women'?category:view==='men'?category:phoneBrand+' · '+t('phones');
+ const kind=view==='women'||view==='men'?categoryLabel(category):phoneBrand+' · '+t('phones');
  for(let i=1;i<=20;i++)items.push({id:view+'|'+(view==='phones'?phoneBrand:category)+'|'+i,kind,index:i,title:t('product')+' '+String(i).padStart(2,'0'),price:prices[(i-1+(view==='men'?4:view==='phones'?8:0))%prices.length]});
  const filtered=searchTerm?items.filter(p=>(p.title+' '+p.kind+' '+(view==='phones'?phoneBrand:'')).toLowerCase().includes(searchTerm.toLowerCase())):items;
  grid.innerHTML='';if(!filtered.length){const e=document.createElement('div');e.className='empty-state';e.style.gridColumn='1/-1';e.textContent=t('searchNone');grid.append(e);return}
